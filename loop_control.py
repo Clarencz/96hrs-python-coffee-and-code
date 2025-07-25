@@ -30,8 +30,16 @@
 #     print("hi")
 # print("out of loop")
 
-for i in range(1,11):
-    if i == 7:
-        continue
-    else:
-        print(i)
+# for i in range(1,11):
+#     if i == 7:
+#         continue
+#     else:
+#         print(i)
+
+# PASS
+# for i in range(1,11):
+#     # if i == 7:
+#     #     continue
+#     # else:
+#     #     print(i)
+#     pass
