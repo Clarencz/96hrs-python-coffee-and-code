@@ -19,3 +19,19 @@
 #     # break
 #     print("out from inner loop")
 # print("out of outer loop")
+
+#CONTINUE
+# count = 1
+# while count <= 10:
+#     print(count)
+#     count+=1
+#     if count ==7:
+#         continue
+#     print("hi")
+# print("out of loop")
+
+for i in range(1,11):
+    if i == 7:
+        continue
+    else:
+        print(i)
