@@ -36,7 +36,11 @@ for _ in range(numbers):
 for _ in range(numbers):
     random_password.append(random.choice(letters_list))
 random.shuffle(random_password) 
-print(random_password)
-print(type(random_password))
+# print(random_password)
+# print(type(random_password))
+# password2=""
+# for _ in random_password:
+#     password2 += _
+# print(password2)
 password = ''.join(random_password)
 print(f"\n✅ Your generated password is: {password}")
