@@ -1,1 +1,1 @@
-# 96hrs-python-coffee-and-code
+# python-coffee-and-code
