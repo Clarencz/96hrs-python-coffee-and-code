@@ -20,3 +20,11 @@
 # print(factorial(6))
 
 
+# fibonacci
+# 1.iterative
+def fibonacci(n):
+    a,b = 0,1
+    for x in range(n-1):
+        a,b = b,a+b
+    return a
+print(fibonacci(5))
