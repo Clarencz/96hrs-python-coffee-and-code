@@ -49,7 +49,31 @@ for person in persons:
     print("height {}".format(person.getElementsByTagName('height')[0].childNodes[0].data))
     
     
-person[2].getElementsByTagName('name')[0].childNodes[0].nodeValue ="new value"
-persons[0].setAttribute('id', '100')
-persons[3].getElementsByTagName('name')[0].childNodes[0].nodeValue = "-10"
-domtree.writexml("data.xml","w")
+# person[2].getElementsByTagName('name')[0].childNodes[0].nodeValue ="new value"
+# persons[0].setAttribute('id', '100')
+# persons[3].getElementsByTagName('name')[0].childNodes[0].nodeValue = "-10"
+# domtree.writexml("data.xml","w")
+
+newperson = domtree.createElement("person")
+newperson.setAttribute("id","6")
+
+name = domtree.createElement("name")
+name.appendChild(domtree.createTextNode("paul green"))
+
+age = domtree.createElement("age")
+age.appendChild(domtree.createTextNode("22"))
+
+weight = domtree.createElement("weight")
+weight.appendChild(domtree.createTextNode("80"))
+
+height = domtree.createElement("height")
+height.appendChild(domtree.createTextNode("178"))
+
+newperson.appendChild(name)
+newperson.appendChild(age)
+newperson.appendChild(weight)
+newperson.appendChild(height)
+
+group.appendChild(newperson)
+
+domtree.writexml(open("data.xml","w"))
