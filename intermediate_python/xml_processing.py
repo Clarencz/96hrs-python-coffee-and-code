@@ -47,3 +47,9 @@ for person in persons:
     print("age {}".format(person.getElementsByTagName('age')[0].childNodes[0].data))
     print("weight {}".format(person.getElementsByTagName('weight')[0].childNodes[0].data))
     print("height {}".format(person.getElementsByTagName('height')[0].childNodes[0].data))
+    
+    
+person[2].getElementsByTagName('name')[0].childNodes[0].nodeValue ="new value"
+persons[0].setAttribute('id', '100')
+persons[3].getElementsByTagName('name')[0].childNodes[0].nodeValue = "-10"
+domtree.writexml("data.xml","w")
