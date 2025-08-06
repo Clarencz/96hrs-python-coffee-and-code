@@ -28,3 +28,11 @@ def fibonacci(n):
         a,b = b,a+b
     return a
 print(fibonacci(5))
+
+# 2.Recursive
+def fibonacci2(n):
+    if n<=1:
+        return n
+    else:
+        return (fibonacci2(n-1)+fibonacci2(n-2) )
+print(fibonacci(5))
