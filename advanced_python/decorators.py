@@ -17,19 +17,41 @@
 
 # ===========Practical Example - Logging ==============
 
-def logged(function):
-    def wrapper(*args, **kwargs):
-        value = function(*args,**kwargs)
-        with open('logfile.txt', 'a+')as f:
-            fname = function.__name__
-            print(f"{fname} returned value {value}")
-            f.write(f"{fname} returned value {value}\n")
+# def logged(function):
+#     def wrapper(*args, **kwargs):
+#         value = function(*args,**kwargs)
+#         with open('logfile.txt', 'a+')as f:
+#             fname = function.__name__
+#             print(f"{fname} returned value {value}")
+#             f.write(f"{fname} returned value {value}\n")
+#         return value
+#     return wrapper
+
+# @logged
+# def add(a,y):
+#     return a+ y
+
+# print(add(12,23))  
+
+# ==================Practical Example 2 - Timing==============
+
+import time
+# timed decorator to see how first a functino executes
+def timed(function):
+    def wrapper(*args,**kwargs):
+        before = time.time()
+        value = function (*args,**kwargs)
+        after = time.time()
+        fname = function.__name__
+        print(f"{fname} took {after-before} seconds to execute")
         return value
     return wrapper
 
-@logged
-def add(a,y):
-    return a+ y
+@timed        
+def myfunction(x):
+    result = 1
+    for i in range(1,x):
+        result*=i
+    return result
 
-print(add(12,23))  
-
+myfunction(1000)
