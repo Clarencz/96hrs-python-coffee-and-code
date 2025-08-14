@@ -1,0 +1,9 @@
+ubuntu
+laptop
+react
+javascript
+nodejs
+parrot
+archlinux
+blackarch
+youtube
